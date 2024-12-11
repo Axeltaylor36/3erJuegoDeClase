@@ -21,7 +21,10 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        Movement();
+        if (Time.timeScale == 1)
+        {
+            Movement();
+        }
         ComprobarInteraccion();
 
     }
