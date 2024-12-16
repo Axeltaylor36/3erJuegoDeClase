@@ -9,6 +9,8 @@ public class SistemaDialogo : MonoBehaviour
 
     [SerializeField] private TMP_Text textoDialogo; //El texto donde se verán reflejados los diálogos.
 
+    [SerializeField] private Transform npcCamera; //Cámara compartida por todos los NPCs.
+
 
     private bool escribiendo;
     private int indiceFraseActual = 0;
@@ -17,7 +19,7 @@ public class SistemaDialogo : MonoBehaviour
 
 
 
-    //PATÓN SINGLE-TON
+    //PATRÓN SINGLE-TON
     //1. Sólo existe una única instacia de SistemaDIalogo
     //2. ES accesible DESDE CUALQUIER PUNTO del programa.
 
@@ -46,12 +48,16 @@ public class SistemaDialogo : MonoBehaviour
         }
     }
 
-    public void IniciarDialogo(DialogaSO dialogo)
+    public void IniciarDialogo(DialogaSO dialogo, Transform cameraPoint)
     {
         Time.timeScale = 0;
         //El diálogo actual que tenemos que tratar es el que me pasan por parámetro.
         dialogoActual = dialogo;
         marcoDialogo.SetActive(true);
+
+        //Posiciono y roto la cámara en el punto de este NPC.
+        npcCamera.SetPositionAndRotation(cameraPoint.position, cameraPoint.rotation);
+
         StartCoroutine(EscribirFrase());
     }
     // Se escribe la frase poco a poco.
