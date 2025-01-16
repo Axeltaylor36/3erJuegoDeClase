@@ -77,4 +77,9 @@ public class Player : MonoBehaviour
         }
         
     }
+
+    public void HacerDanho(float danhoAtaque)
+    {
+        Debug.Log("PUTOOOOOOOOOOO, NO ME ANDES PICOTANDO" + danhoAtaque);
+    }
 }

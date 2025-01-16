@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Enemy : MonoBehaviour, IInteractuable
 {
 
     private SistemaPatrulla patrulla;
@@ -22,10 +22,22 @@ public class Enemy : MonoBehaviour
         this.Target = target;//Definimos target.
     }
 
+    public void ActivarPatrulla()
+    {
+        combate.enabled = false;
+        patrulla.enabled = true;    
+    }
+
+    public void Interacruar()
+    {
+        
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        //Empieza el juego y activamos la patrulla.
+        patrulla.enabled = true ;
     }
 
     // Update is called once per frame
