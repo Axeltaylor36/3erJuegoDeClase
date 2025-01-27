@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class SistemaDialogo : MonoBehaviour
 {
+    [SerializeField]
+    private EventManagerSO eventManager;
+
     [SerializeField] private GameObject marcoDialogo; //Marco a habilitar/deshabilitar
 
     [SerializeField] private TMP_Text textoDialogo; //El texto donde se verán reflejados los diálogos.
@@ -131,7 +134,14 @@ public class SistemaDialogo : MonoBehaviour
         marcoDialogo.SetActive(false);//Cerramos el marco de diálogo.
         indiceFraseActual = 0; //Para que ene posteriores diálogos empezamos desde índice 0.
         escribiendo = false ;
+        
+        if (dialogoActual.tieneMision)
+        {
 
+            eventManager.NuevaMision(dialogoActual.mision);
+
+        }
+       
         dialogoActual = null;
 
 

@@ -9,13 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b26b9244a7a33b845b2a699560e7438d, type: 3}
+  m_Script: {fileID: 11500000, guid: ca72e912c432b9341bba6168f61d3f74, type: 3}
   m_Name: EventManager
   m_EditorClassIdentifier: 
-  frases:
-  - "Hola, soy una copia\t\t"
-  - Asi que no me hagas caso mas halla de lo que te voya  decir ahora
-  - 'El otro personaje tiene una mision para ti
-
-'
-  tiempoEntreLetras: 0
