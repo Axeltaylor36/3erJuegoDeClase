@@ -28,7 +28,7 @@ public class Enemy : MonoBehaviour, IInteractuable
         patrulla.enabled = true;    
     }
 
-    public void Interacruar()
+    public void Interactuar(Transform interactor)
     {
         
     }

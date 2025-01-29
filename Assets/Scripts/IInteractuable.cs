@@ -7,5 +7,5 @@ using UnityEngine;
 //En aquella entidades que, en este caso, sean interactuables.
 public interface IInteractuable 
 {
-    public void Interacruar();
+    public void Interactuar(Transform interactor);
 }

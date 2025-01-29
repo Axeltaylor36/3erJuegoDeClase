@@ -8,11 +8,26 @@ using UnityEngine;
 public class EventManagerSO : ScriptableObject
 {
     public event Action <MisionSO> OnNuevaMision;
+    public event Action <MisionSO> OnActualizarMision;
+    public event Action <MisionSO> OnTerminarMision;
+
     public void NuevaMision(MisionSO mision)
     {
         
         OnNuevaMision?.Invoke(mision);
 
     }
+
+    public void ActualizarMision(MisionSO mision)
+    {
+        OnActualizarMision?.Invoke(mision);
+
+    }
+    public void TerminarMision (MisionSO mision)
+    {
+        OnActualizarMision?.Invoke(mision);
+
+    }
+
 
 }

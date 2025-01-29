@@ -52,7 +52,7 @@ public class Player : MonoBehaviour
     private void ComprobarInteraccion()
     {
         //Si existe un interactuable al cual clické y lleva consigo el script NPC...
-        if (LastClick != null && LastClick.TryGetComponent(out NPC npc))
+        if (LastClick != null && LastClick.TryGetComponent(out IInteractuable interactuable))
         {
             //Actualizo distancia de parada para no "Comerme" al NPC.
             agent.stoppingDistance = 3f;
@@ -61,7 +61,7 @@ public class Player : MonoBehaviour
             if (!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
             {
                 //Y por lo tanto, interactuo con el NPC. Ponemos el THIS para dejar claro que es NUESTRO transform.
-                npc.Interactuar(this.transform);
+                interactuable.Interactuar(this.transform);
 
                 //Me olvido de cual fue el ultimo click, porque sólo quiero interactuar UNA VEZ.
                 //Si lo dejamos interactuaremos todo el timepo con el NPC
