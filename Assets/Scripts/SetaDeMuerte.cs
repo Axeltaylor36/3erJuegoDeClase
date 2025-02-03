@@ -27,7 +27,7 @@ public class SetaDeMuerte : MonoBehaviour, IInteractuable
         }
         else//Ya hemos terminado de rcoger las setas
         {
-        eventManager.ActualizarMision(mision);
+            eventManager.TerminarMision(mision);
 
         }
         Destroy(gameObject);

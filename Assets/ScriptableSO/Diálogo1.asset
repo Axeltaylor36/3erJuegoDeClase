@@ -17,5 +17,5 @@ MonoBehaviour:
   - Necesito que me hagas un encargo, porque mi abuelita se ha puesto enferma.
   - Necesito que me busques unas setas para curarla.
   tiempoEntreLetras: 0
-  tieneMision: 0
-  mision: {fileID: 0}
+  tieneMision: 1
+  mision: {fileID: 11400000, guid: 0f4af9e4575763644b7d91a021e82b25, type: 2}

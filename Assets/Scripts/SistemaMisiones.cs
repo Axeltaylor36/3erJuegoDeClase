@@ -17,7 +17,7 @@ public class SistemaMisiones : MonoBehaviour
         //Me suscribo al evento y lo vinculo con el método.
         eventManager.OnNuevaMision += EncenderToggleMission;
         eventManager.OnActualizarMision += ActualizarToggleMision;
-        eventManager.OnActualizarMision += TerminarToggleMision;
+        eventManager.OnTerminarMision += TerminarToggleMision;
     }
 
     private void EncenderToggleMission(MisionSO mision)

@@ -25,7 +25,7 @@ public class EventManagerSO : ScriptableObject
     }
     public void TerminarMision (MisionSO mision)
     {
-        OnActualizarMision?.Invoke(mision);
+        OnTerminarMision?.Invoke(mision);
 
     }
 
