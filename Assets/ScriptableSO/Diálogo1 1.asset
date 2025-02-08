@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frases:
   - "Muchas gracias por recogerme las setas\t"
-  - Te lo devuelvo con una palmada en la espalda
+  - Te lo devuelvo con una palmada en la espalda. Ya puedes irte por el camino donde
+    encontraste la 3a seta
   tiempoEntreLetras: 0
   tieneMision: 0
   mision: {fileID: 0}
