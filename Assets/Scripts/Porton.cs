@@ -9,7 +9,7 @@ public class Porton : MonoBehaviour, IInteractuable
 {
     [SerializeField] private MisionSO mision;
     [SerializeField] private EventManagerSO eventManager;
-    [SerializeField] TMP_Text mensaje;
+    [SerializeField] private TMP_Text mensaje;
 
     public void Interactuar(Transform interactor)
     {
